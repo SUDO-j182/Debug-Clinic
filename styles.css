@@ -87,3 +87,29 @@ section {
   font-weight: bold;
   font-size: 0.95rem;
 }
+/* ====== BROKEN VERSION NAV ====== */
+.mobile-nav {
+  padding: 1rem;
+  background: #eef3ff;
+  border-radius: var(--radius);
+}
+
+.nav-button-broken {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+
+.nav-menu-broken {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.hidden-menu {
+  display: none;
+}
