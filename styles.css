@@ -1,0 +1,45 @@
+/* ====== DESIGN TOKENS ====== */
+:root {
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --text: #1e1e1e;
+  --text-secondary: #555;
+  --accent: #4a7aff;
+  --border: #e1e1e1;
+  --radius: 10px;
+  --shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+/* ====== GLOBAL ====== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 860px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* ====== HERO ====== */
+.hero {
+  padding: 3rem 1rem;
+  background: var(--surface);
+  text-align: center;
+  box-shadow: var(--shadow);
+  margin-bottom: 2rem;
+}
+
+/* ====== SECTIONS ====== */
+section {
+  background: var(--surface);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
