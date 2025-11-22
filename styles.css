@@ -43,3 +43,47 @@ section {
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
+/* ====== BUG CARD ====== */
+.bug-card {
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  margin-bottom: 2rem;
+}
+
+.bug-summary {
+  margin-bottom: 1rem;
+}
+
+.demo-wrapper {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.demo {
+  flex: 1 1 300px;
+  padding: 1rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: #fafafa;
+}
+
+.hidden {
+  display: none;
+}
+
+.toggle-btn {
+  margin-top: 1.2rem;
+  padding: 0.7rem 1.4rem;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.95rem;
+}

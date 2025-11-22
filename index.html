@@ -26,7 +26,33 @@
 
     <section id="cases">
       <h2>Debugging Case Studies</h2>
-      <!-- Bug cards will be added in Phase 2 -->
+      <article class="bug-card">
+  <h3>Bug #1 – Mobile Navigation Not Opening</h3>
+
+  <p class="bug-summary">
+    The mobile menu button does nothing when tapped. The user can’t open the navigation.
+  </p>
+
+  <div class="bug-details">
+    <p><strong>Cause:</strong> The event listener is attached to the wrong element.</p>
+    <p><strong>Fix:</strong> Attach the listener to the correct button and ensure the menu toggles visibility.</p>
+  </div>
+
+  <div class="demo-wrapper">
+    <div class="demo broken-demo">
+      <h4>Broken Demo</h4>
+      <!-- Broken demo will be added in Commit 3 -->
+    </div>
+
+    <div class="demo fixed-demo hidden">
+      <h4>Fixed Demo</h4>
+      <!-- Fixed demo will be added in Commit 4 -->
+    </div>
+  </div>
+
+  <button class="toggle-btn" data-target="bug1">Show Fixed Version</button>
+</article>
+
     </section>
 
     <section id="cta">
