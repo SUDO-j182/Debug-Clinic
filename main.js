@@ -58,7 +58,31 @@ toggleButtons.forEach((btn) => {
 });
 
 
-// ===== PLACEHOLDER FOR FORM VALIDATION LOGIC =====
-// Broken and fixed logic will be added in Commit 6 and 7.
-console.log("Form validation demos ready for JS logic.");
+// ===== BROKEN FORM VALIDATION LOGIC =====
+
+// This broken code allows the form to submit even when empty.
+// Bugs:
+// 1) Uses = instead of ===
+// 2) Missing preventDefault()
+// 3) Message never updates reliably
+
+const brokenForm = document.querySelector(".form-broken");
+const brokenInput = document.querySelector(".name-input-broken");
+const brokenMsg = document.querySelector(".broken-message");
+
+if (brokenForm && brokenInput && brokenMsg) {
+  brokenForm.addEventListener("submit", (e) => {
+
+    // BUG 1: Wrong operator (= assignment)
+    if (brokenInput.value = "") {
+      brokenMsg.textContent = "Form submitted (but name was empty!)";
+    } else {
+      brokenMsg.textContent = "Form submitted.";
+    }
+
+    // BUG 2: No preventDefault()
+    // The form will reload the page.
+  });
+}
+
 
