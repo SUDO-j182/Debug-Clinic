@@ -143,6 +143,50 @@
         <button class="toggle-btn" data-target="bug2">Show Fixed Version</button>
       </article>
 
+      <!-- ============================= -->
+<!-- BUG #3 – Layout Breaking on Mobile -->
+<!-- ============================= -->
+<article class="bug-card">
+  <h3>Bug #3 – Layout Breaking on Mobile</h3>
+
+  <p class="bug-summary">
+    On small screens, the layout overflows horizontally and forces users to scroll sideways.
+  </p>
+
+  <div class="bug-details">
+    <p><strong>Cause:</strong> The card container uses fixed widths and no flex-wrap.</p>
+    <p><strong>Fix:</strong> Use flexible sizing, wrapping, and proper responsive breakpoints.</p>
+  </div>
+
+  <div class="demo-wrapper">
+
+    <!-- Broken Demo -->
+    <div class="demo broken-demo">
+      <h4>Broken Demo</h4>
+
+      <div class="broken-layout-container">
+        <div class="broken-card">Card 1</div>
+        <div class="broken-card">Card 2</div>
+        <div class="broken-card">Card 3</div>
+      </div>
+    </div>
+
+    <!-- Fixed Demo -->
+    <div class="demo fixed-demo hidden">
+      <h4>Fixed Demo</h4>
+
+      <div class="fixed-layout-container">
+        <div class="fixed-card">Card 1</div>
+        <div class="fixed-card">Card 2</div>
+        <div class="fixed-card">Card 3</div>
+      </div>
+    </div>
+
+  </div>
+
+  <button class="toggle-btn" data-target="bug3">Show Fixed Version</button>
+</article>
+
     </section>
 
 

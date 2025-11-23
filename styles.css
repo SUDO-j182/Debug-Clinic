@@ -167,3 +167,40 @@ form button {
   margin-top: 0.8rem;
   font-weight: bold;
 }
+/* ====== MOBILE LAYOUT BREAK BUG ====== */
+.broken-layout-container {
+  display: flex;
+  gap: 1rem;
+  /* BUG: fixed width causes overflow */
+  width: 500px;
+  background: #ffecec;
+  padding: 1rem;
+  border-radius: var(--radius);
+}
+
+.broken-card {
+  background: #ffb3b3;
+  padding: 1rem;
+  width: 200px;
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+
+/* ====== FIXED MOBILE LAYOUT ====== */
+.fixed-layout-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background: #e8ffe8;
+  padding: 1rem;
+  border-radius: var(--radius);
+}
+
+.fixed-card {
+  background: #72dd72;
+  padding: 1rem;
+  flex: 1 1 120px;
+  border-radius: var(--radius);
+  text-align: center;
+}
