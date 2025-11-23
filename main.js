@@ -2,11 +2,13 @@
 console.log("Debugging Clinic Loaded");
 
 
-// ===== BROKEN NAV DEMO =====
+// ============================================================
+// ===== BROKEN NAV DEMO (intentional incorrect behaviour) =====
+// ============================================================
 
 const brokenMenu = document.querySelector(".nav-menu-broken");
 
-// Wrong on purpose: listener on the menu instead of the button
+// Wrong on purpose: listener attached to menu instead of button
 if (brokenMenu) {
   brokenMenu.addEventListener("click", () => {
     brokenMenu.classList.toggle("hidden-menu");
@@ -14,19 +16,40 @@ if (brokenMenu) {
 }
 
 
-// ===== FIXED NAV DEMO =====
+
+// ============================================================
+// ===== FIXED NAV DEMO (correct behaviour) ====================
+// ============================================================
 
 const fixedMenu = document.querySelector(".nav-menu-fixed");
 const fixedButton = document.querySelector(".nav-button-fixed");
 
+// Ensure menu starts hidden
+if (fixedMenu && !fixedMenu.classList.contains("hidden-menu")) {
+  fixedMenu.classList.add("hidden-menu");
+}
+
+// Toggle proper visibility on button click
 if (fixedButton && fixedMenu) {
   fixedButton.addEventListener("click", () => {
     fixedMenu.classList.toggle("hidden-menu");
   });
 }
 
+// Prevent fixed menu links from jumping to the top
+if (fixedMenu) {
+  fixedMenu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+    });
+  });
+}
 
-// ===== TOGGLE BETWEEN BROKEN & FIXED =====
+
+
+// ============================================================
+// ===== TOGGLE BETWEEN BROKEN & FIXED DEMOS ==================
+// ============================================================
 
 const toggleButtons = document.querySelectorAll(".toggle-btn");
 
@@ -54,8 +77,9 @@ toggleButtons.forEach((btn) => {
 });
 
 
+
 // ============================================================
-// ===== BROKEN FORM VALIDATION LOGIC (intentional errors) =====
+// ===== BROKEN FORM VALIDATION LOGIC (intentional bug) =======
 // ============================================================
 
 const brokenForm = document.querySelector(".form-broken");
@@ -65,22 +89,21 @@ const brokenMsg = document.querySelector(".broken-message");
 if (brokenForm && brokenInput && brokenMsg) {
   brokenForm.addEventListener("submit", (e) => {
 
-    // BUG: Using assignment operator instead of comparison
+    // Intentional bug: assignment instead of comparison
     if (brokenInput.value = "") {
       brokenMsg.textContent = "Form submitted (but name was empty!)";
     } else {
       brokenMsg.textContent = "Form submitted.";
     }
 
-    // BUG: Missing preventDefault() so page reloads
-    // (this is intentional for broken demo)
+    // Intentional bug: missing preventDefault()
   });
 }
 
 
 
 // ============================================================
-// ===== FIXED FORM VALIDATION LOGIC (correct behaviour) ======
+// ===== FIXED FORM VALIDATION LOGIC ===========================
 // ============================================================
 
 const fixedForm = document.querySelector(".form-fixed");
@@ -89,7 +112,7 @@ const fixedMsg = document.querySelector(".fixed-message");
 
 if (fixedForm && fixedInput && fixedMsg) {
   fixedForm.addEventListener("submit", (e) => {
-    e.preventDefault(); // Prevent page reload
+    e.preventDefault(); // Prevent reload
 
     if (fixedInput.value.trim() === "") {
       fixedMsg.textContent = "Please enter your name.";
