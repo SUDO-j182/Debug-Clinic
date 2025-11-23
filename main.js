@@ -1,6 +1,7 @@
 // Initial script placeholder
 console.log("Debugging Clinic Loaded");
 
+
 // ===== BROKEN DEMO =====
 
 // This is WRONG on purpose.
@@ -14,3 +15,44 @@ brokenMenu.addEventListener("click", () => {
   brokenMenu.classList.toggle("hidden-menu");
 });
 
+
+// ===== FIXED DEMO =====
+
+const fixedMenu = document.querySelector(".nav-menu-fixed");
+const fixedButton = document.querySelector(".nav-button-fixed");
+
+if (fixedButton && fixedMenu) {
+  fixedButton.addEventListener("click", () => {
+    fixedMenu.classList.toggle("hidden-menu");
+  });
+}
+
+
+// ===== TOGGLE BETWEEN BROKEN & FIXED =====
+
+const toggleButtons = document.querySelectorAll(".toggle-btn");
+
+toggleButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const card = btn.closest(".bug-card");
+    if (!card) return;
+
+    const brokenDemo = card.querySelector(".broken-demo");
+    const fixedDemo = card.querySelector(".fixed-demo");
+    if (!brokenDemo || !fixedDemo) return;
+
+    const showingFixed = !fixedDemo.classList.contains("hidden");
+
+    if (showingFixed) {
+      // Switch to BROKEN view
+      fixedDemo.classList.add("hidden");
+      brokenDemo.classList.remove("hidden");
+      btn.textContent = "Show Fixed Version";
+    } else {
+      // Switch to FIXED view
+      brokenDemo.classList.add("hidden");
+      fixedDemo.classList.remove("hidden");
+      btn.textContent = "Show Broken Version";
+    }
+  });
+});

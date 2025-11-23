@@ -26,35 +26,58 @@
 
     <section id="cases">
       <h2>Debugging Case Studies</h2>
+
+      <!-- ============================= -->
+      <!-- BUG #1 – MOBILE NAV NOT OPENING -->
+      <!-- ============================= -->
       <article class="bug-card">
-  <h3>Bug #1 – Mobile Navigation Not Opening</h3>
+        <h3>Bug #1 – Mobile Navigation Not Opening</h3>
 
-  <p class="bug-summary">
-    The mobile menu button does nothing when tapped. The user can’t open the navigation.
-  </p>
+        <p class="bug-summary">
+          The mobile menu button does nothing when tapped. The user can’t open the navigation.
+        </p>
 
-  <div class="bug-details">
-    <p><strong>Cause:</strong> The event listener is attached to the wrong element.</p>
-    <p><strong>Fix:</strong> Attach the listener to the correct button and ensure the menu toggles visibility.</p>
-  </div>
+        <div class="bug-details">
+          <p><strong>Cause:</strong> The event listener is attached to the wrong element.</p>
+          <p><strong>Fix:</strong> Attach the listener to the correct button and ensure the menu toggles visibility.</p>
+        </div>
 
-   <div class="demo broken-demo">
-  <h4>Broken Demo</h4>
+        <div class="demo-wrapper">
 
-  <div class="mobile-nav broken-version">
-    <button class="nav-button-broken">☰ Menu</button>
+          <!-- Broken Demo -->
+          <div class="demo broken-demo">
+            <h4>Broken Demo</h4>
 
-    <nav class="nav-menu-broken hidden-menu">
-      <a href="#">Home</a>
-      <a href="#">Services</a>
-      <a href="#">Contact</a>
-    </nav>
-  </div>
-</div>
+            <div class="mobile-nav broken-version">
+              <button class="nav-button-broken">☰ Menu</button>
 
+              <nav class="nav-menu-broken hidden-menu">
+                <a href="#">Home</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+              </nav>
+            </div>
+          </div>
 
-  <button class="toggle-btn" data-target="bug1">Show Fixed Version</button>
-</article>
+          <!-- Fixed Demo -->
+          <div class="demo fixed-demo hidden">
+            <h4>Fixed Demo</h4>
+
+            <div class="mobile-nav fixed-version">
+              <button class="nav-button-fixed">☰ Menu</button>
+
+              <nav class="nav-menu-fixed hidden-menu">
+                <a href="#">Home</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+              </nav>
+            </div>
+          </div>
+
+        </div>
+
+        <button class="toggle-btn" data-target="bug1">Show Fixed Version</button>
+      </article>
 
     </section>
 
