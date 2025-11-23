@@ -138,6 +138,7 @@ section {
   flex-direction: column;
   gap: 0.5rem;
 }
+
 /* ====== FORM VALIDATION DEMO ====== */
 form {
   display: flex;
@@ -167,12 +168,17 @@ form button {
   margin-top: 0.8rem;
   font-weight: bold;
 }
+
 /* ====== MOBILE LAYOUT BREAK BUG ====== */
 .broken-layout-container {
   display: flex;
   gap: 1rem;
-  /* BUG: fixed width causes overflow */
-  width: 500px;
+
+  /* BUGS that cause real problems on mobile */
+  width: 600px;               /* Too wide for mobile screens */
+  overflow-x: visible;        /* Content spills outside */
+  flex-wrap: nowrap;          /* Prevents wrapping */
+
   background: #ffecec;
   padding: 1rem;
   border-radius: var(--radius);
@@ -181,16 +187,19 @@ form button {
 .broken-card {
   background: #ffb3b3;
   padding: 1rem;
-  width: 200px;
+
+  /* BUG: fixed card width guarantees overflow */
+  width: 250px;
+
   border-radius: var(--radius);
   text-align: center;
+  font-weight: bold;
 }
-
 
 /* ====== FIXED MOBILE LAYOUT ====== */
 .fixed-layout-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap;            /* Key fix */
   gap: 1rem;
   background: #e8ffe8;
   padding: 1rem;
@@ -200,7 +209,21 @@ form button {
 .fixed-card {
   background: #72dd72;
   padding: 1rem;
-  flex: 1 1 120px;
+
+  /* Flexible responsive layout */
+  flex: 1 1 calc(33% - 1rem);
+  min-width: 120px;
+  max-width: 200px;
+
   border-radius: var(--radius);
   text-align: center;
+  font-weight: bold;
 }
+
+/* Responsive fix for mobile */
+@media (max-width: 480px) {
+  .fixed-card {
+    flex: 1 1 calc(50% - 1rem);
+  }
+}
+
