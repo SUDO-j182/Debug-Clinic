@@ -226,4 +226,51 @@ form button {
     flex: 1 1 calc(50% - 1rem);
   }
 }
+/* ====== POLISH: HEADINGS ====== */
+h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  color: var(--text);
+}
 
+h3 {
+  margin-top: 0;
+  font-size: 1.35rem;
+}
+
+h4 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* ====== POLISH: BUG CARD ====== */
+.bug-card {
+  line-height: 1.55;
+}
+
+.bug-details p {
+  margin: 0.3rem 0;
+}
+
+/* ====== POLISH: DEMO BOXES ====== */
+.demo {
+  background: #fdfdfd;
+  transition: box-shadow 0.2s ease;
+}
+
+.demo:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.09);
+}
+
+/* ====== POLISH: TOGGLE BUTTON ====== */
+.toggle-btn {
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.toggle-btn:hover {
+  background: #3d6af8;
+}
+
+.toggle-btn:active {
+  transform: scale(0.97);
+}
