@@ -14,6 +14,10 @@
   </header>
 
   <main class="container">
+
+    <!-- ============================= -->
+    <!-- HOW I DEBUG -->
+    <!-- ============================= -->
     <section id="method">
       <h2>How I Debug</h2>
       <ul>
@@ -24,8 +28,12 @@
       </ul>
     </section>
 
+    <!-- ============================= -->
+    <!-- BUG CASES -->
+    <!-- ============================= -->
     <section id="cases">
       <h2>Debugging Case Studies</h2>
+
 
       <!-- ============================= -->
       <!-- BUG #1 – MOBILE NAV NOT OPENING -->
@@ -79,12 +87,73 @@
         <button class="toggle-btn" data-target="bug1">Show Fixed Version</button>
       </article>
 
+
+
+      <!-- ============================= -->
+      <!-- BUG #2 – FORM VALIDATION NOT WORKING -->
+      <!-- ============================= -->
+      <article class="bug-card">
+        <h3>Bug #2 – Form Validation Not Working</h3>
+
+        <p class="bug-summary">
+          The form submits even when required fields are empty. The validation logic fails silently.
+        </p>
+
+        <div class="bug-details">
+          <p><strong>Cause:</strong> Incorrect comparison operator and missing preventDefault().</p>
+          <p><strong>Fix:</strong> Use strict comparison and ensure default form submission is stopped.</p>
+        </div>
+
+        <div class="demo-wrapper">
+
+          <!-- Broken Demo -->
+          <div class="demo broken-demo">
+            <h4>Broken Demo</h4>
+
+            <form class="form-broken">
+              <label>
+                Name:
+                <input type="text" class="name-input-broken">
+              </label>
+
+              <button type="submit" class="submit-broken">Submit</button>
+            </form>
+
+            <p class="broken-message"></p>
+          </div>
+
+          <!-- Fixed Demo -->
+          <div class="demo fixed-demo hidden">
+            <h4>Fixed Demo</h4>
+
+            <form class="form-fixed">
+              <label>
+                Name:
+                <input type="text" class="name-input-fixed">
+              </label>
+
+              <button type="submit" class="submit-fixed">Submit</button>
+            </form>
+
+            <p class="fixed-message"></p>
+          </div>
+
+        </div>
+
+        <button class="toggle-btn" data-target="bug2">Show Fixed Version</button>
+      </article>
+
     </section>
 
+
+    <!-- ============================= -->
+    <!-- CTA -->
+    <!-- ============================= -->
     <section id="cta">
       <h2>Need a Frontend Bug Fixed?</h2>
       <p>I fix layout issues, JavaScript errors, UI problems and small tasks fast.</p>
     </section>
+
   </main>
 
   <script src="main.js"></script>

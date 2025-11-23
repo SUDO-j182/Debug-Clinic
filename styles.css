@@ -138,3 +138,32 @@ section {
   flex-direction: column;
   gap: 0.5rem;
 }
+/* ====== FORM VALIDATION DEMO ====== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+form input {
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+form button {
+  width: fit-content;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.broken-message,
+.fixed-message {
+  margin-top: 0.8rem;
+  font-weight: bold;
+}

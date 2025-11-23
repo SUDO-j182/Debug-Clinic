@@ -56,3 +56,9 @@ toggleButtons.forEach((btn) => {
     }
   });
 });
+
+
+// ===== PLACEHOLDER FOR FORM VALIDATION LOGIC =====
+// Broken and fixed logic will be added in Commit 6 and 7.
+console.log("Form validation demos ready for JS logic.");
+
