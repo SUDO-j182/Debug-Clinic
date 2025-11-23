@@ -274,3 +274,43 @@ h4 {
 .toggle-btn:active {
   transform: scale(0.97);
 }
+/* ====== FOOTER ====== */
+.site-footer {
+  margin-top: 2rem;
+  padding: 2.5rem 1rem;
+  background: #f0f2f5;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  border-radius: var(--radius);
+}
+
+.site-footer h4 {
+  margin: 0 0 0.4rem;
+  font-size: 1.3rem;
+  color: var(--text);
+}
+
+.footer-tagline {
+  margin: 0 0 1rem;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.4rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.footer-links a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.footer-links a:hover {
+  opacity: 0.7;
+}
