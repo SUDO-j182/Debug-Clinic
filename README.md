@@ -7,7 +7,7 @@ Each case includes a broken version, the underlying cause, and a clean, fixed ve
 ---
 
 ## 🌐 Live Demo  
-👉 **https://sudo-j182.github.io/Debug-Clinic/**
+👉 **https://sudo-j182.github.io/debug-clinic-v1/**
 
 ---
 
